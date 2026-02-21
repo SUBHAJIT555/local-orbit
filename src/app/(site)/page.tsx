@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Local Orbit | Online Shopping for Electronics, Books, Stationery, and Garments",
-  description: "Local Orbit is India's trusted store for electronics, books, stationery, and garments all under ₹10,000. Enjoy honest prices, fast delivery, and support made for Indian shoppers.",
+  description: "Local Orbit is your trusted store for electronics, books, stationery, and garments. Honest prices, fast delivery, and support made for Indian shoppers.",
   // other metadata
 };
 

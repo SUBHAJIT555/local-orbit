@@ -17,8 +17,8 @@ const About = () => {
                 Welcome to {siteConfig.brand.name}
               </h1>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                Local Orbit is your trusted everyday store for electronics, stationery, books, and garments—all under
-                ₹10,000. We focus on quality, honest pricing, and reliable service for customers across India.
+                Local Orbit is your trusted everyday store for electronics, stationery, books, and garments. We focus on
+                quality, honest pricing, and reliable service for customers across India.
               </p>
             </div>
           </div>
@@ -31,7 +31,7 @@ const About = () => {
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-600 mb-4">
                 Local Orbit started with a simple idea: a one-stop shop for everyday needs—electronics, stationery,
-                books, and fashion—at honest prices under ₹10,000. We built our catalog and service around what
+                books, and fashion—at honest prices. We built our catalog and service around what
                 Indian customers want: quality products, clear pricing, and a team that puts customers first.
               </p>
               <p className="text-gray-600 mb-4">
@@ -87,7 +87,7 @@ const About = () => {
               </div>
               <p className="text-gray-600">
                 To be your trusted everyday store—offering quality electronics, stationery, books, and garments
-                under ₹10,000, with honest pricing, safe payments, and service that puts customers first.
+                with honest pricing, safe payments, and service that puts customers first.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ const About = () => {
               </div>
               <ul className="list-disc pl-5 space-y-2 text-gray-600">
                 <li>Built for real needs—products and service designed for our customers</li>
-                <li>Quality and value—curated range, all under ₹10,000</li>
+                <li>Quality and value—curated range at honest prices</li>
                 <li>Transparency and trust—clear pricing, no hidden charges</li>
                 <li>Reliable delivery and easy returns across India</li>
               </ul>
@@ -280,9 +280,9 @@ const About = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="font-medium text-dark mb-2">Honest Prices, Under ₹10,000</h3>
+                <h3 className="font-medium text-dark mb-2">Honest Prices</h3>
                 <p className="text-gray-600 text-sm">
-                  Everything we sell is under ₹10,000. No inflated prices—just fair value for every customer.
+                  No inflated prices—just fair value for every customer. Clear pricing on every product.
                 </p>
               </div>
             </div>

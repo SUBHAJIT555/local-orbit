@@ -12,8 +12,8 @@ const FAQs = () => {
 
   const faqs = [
     {
-      question: "What does Supreme Cart sell?",
-      answer: "Supreme Cart is an Indian online store selling electronics (mobile accessories, smart gadgets, computer accessories, home electronics), books, stationery, and garments for men, women, and kids. All products are priced under ₹10,000."
+      question: "What does Local Orbit sell?",
+      answer: "Local Orbit is an Indian online store selling electronics (mobile accessories, smart gadgets, computer accessories, home electronics), books, stationery, and garments for men, women, and kids. We focus on quality and honest pricing."
     },
     {
       question: "Do you deliver across India?",
@@ -40,11 +40,11 @@ const FAQs = () => {
       answer: "If you receive a damaged or incorrect product, contact us within 48 hours with your order number and photos. We will arrange a replacement or refund as per our policy."
     },
     {
-      question: "Are all products really under ₹10,000?",
-      answer: "Yes. Supreme Cart focuses on value for Indian customers. Every product on our site is priced under ₹10,000—electronics, books, stationery, and garments included."
+      question: "Does Local Orbit offer good value?",
+      answer: "Yes. Local Orbit focuses on value for Indian customers. We offer quality electronics, books, stationery, and garments at honest, competitive prices."
     },
     {
-      question: "How do I contact Supreme Cart?",
+      question: "How do I contact Local Orbit?",
       answer: `Reach us by email at ${siteConfig.brand.email.general || siteConfig.brand.email.support}, phone at ${siteConfig.brand.phone}, or the contact form on our website. We're here to help during ${siteConfig.brand.businessHours}.`
     },
     {
@@ -52,12 +52,12 @@ const FAQs = () => {
       answer: "We run regular promotions and seasonal sales. Check the homepage and product pages for current offers. You can also subscribe to our newsletter for updates on deals and new arrivals."
     },
     {
-      question: "Is my data safe with Supreme Cart?",
+      question: "Is my data safe with Local Orbit?",
       answer: "We take privacy seriously. Your personal and payment information is protected. For full details on how we collect, use, and protect your data, see our Privacy Policy and Cookie Policy."
     },
     {
-      question: "Where is Supreme Cart based?",
-      answer: `Supreme Cart is an Indian brand. Our registered address is ${siteConfig.brand.address.full}. For business hours and contact details, visit our Contact page.`
+      question: "Where is Local Orbit based?",
+      answer: `Local Orbit is an Indian brand. Our registered address is ${siteConfig.brand.address.full}. For business hours and contact details, visit our Contact page.`
     }
   ];
 

@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-600 mb-7.5">
-              Local Orbit is India&apos;s trusted store for electronics, books, stationery, and garments all under ₹10,000. Enjoy honest prices, fast delivery, and support made for Indian shoppers.
+              Local Orbit is your trusted store for electronics, books, stationery, and garments. Honest prices, fast delivery, and support across India.
             </p>
 
             {/* <!-- Social Links start --> */}

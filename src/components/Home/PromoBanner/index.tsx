@@ -24,7 +24,7 @@ const PromoBanner = () => {
             </span>
 
             <h2 className="font-bold text-xl lg:text-heading-4 xl:text-heading-3 text-dark mb-5">
-              UP TO 30% OFF — ALL UNDER ₹10,000
+              UP TO 30% OFF — ELECTRONICS, BOOKS, STATIONERY & GARMENTS
             </h2>
 
             <p>
@@ -78,7 +78,7 @@ const PromoBanner = () => {
               </h2>
 
               <p className="font-semibold text-custom-1 text-teal">
-                Flat 20% off — under ₹10,000
+                Flat 20% off on select items
               </p>
 
               <a
@@ -117,7 +117,7 @@ const PromoBanner = () => {
 
               <p className="max-w-[285px] text-custom-sm">
                 Fresh styles in garments for the whole family. Quality fabric,
-                great fits — all under ₹10,000.
+                great fits for the whole family.
               </p>
 
               <a
