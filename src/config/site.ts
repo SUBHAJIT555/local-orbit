@@ -1,12 +1,7 @@
 export const siteConfig = {
   brand: {
     name: "Local Orbit",
-    email: {
-      support: "support@local-orbit.com",
-      privacy: "privacy@local-orbit.com",
-      legal: "legal@local-orbit.com",
-      general: "info@local-orbit.com",
-    },
+    email: "info@local-orbit.com",
     phone: "+91 9876543210",
     address: {
       street: "4517 Washington Ave.",

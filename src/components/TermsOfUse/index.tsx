@@ -183,7 +183,7 @@ const TermsOfUse = () => {
                 </p>
                 <div className="bg-gray-1 rounded-md p-5 text-gray-600">
                   <p className="mb-2">
-                    <strong className="text-dark">Email:</strong> {siteConfig.brand.email.legal}
+                    <strong className="text-dark">Email:</strong> {siteConfig.brand.email}
                   </p>
                   <p className="mb-2">
                     <strong className="text-dark">Phone:</strong> {siteConfig.brand.phone}
