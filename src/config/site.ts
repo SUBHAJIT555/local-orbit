@@ -1,16 +1,20 @@
 export const siteConfig = {
   brand: {
     name: "Local Orbit",
+    domain: "local-orbit.com",
+    url: "https://local-orbit.com",
+    description:
+      "Local Orbit is India's trusted store for electronics, books, stationery, and garments. Honest prices, fast delivery, and support made for Indian shoppers.",
     email: "info@local-orbit.com",
-    phone: "+91 9876543210",
+    phone: "+91 98765 43210",
     address: {
-      street: "4517 Washington Ave.",
-      city: "Manchester",
-      state: "Kentucky",
-      zip: "39495",
-      full: "4517 Washington Ave., Manchester, Kentucky 39495",
-      location: "711-2880 Nulla St.",
+      street: "Shop 12, Pacific Mall, Najafgarh Road",
+      city: "Tagore Garden",
+      state: "New Delhi, Delhi",
+      zip: "110018",
+      full: "Shop 12, Pacific Mall, Najafgarh Road, Tagore Garden, New Delhi, Delhi 110018, India",
+      location: "Tagore Garden, New Delhi 110018, India",
     },
-    businessHours: "Mon - Sat: 10 AM - 6 PM",
+    businessHours: "Mon - Sat: 9 AM - 6 PM IST",
   },
 } as const;

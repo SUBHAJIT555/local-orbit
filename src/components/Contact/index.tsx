@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, type ContactFormData } from "@/lib/schemas";
+import { submitToApi } from "@/lib/submit-api";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -26,25 +27,19 @@ const Contact = () => {
     setSuccess(false);
 
     try {
-      const formData = new FormData();
-      formData.append("formType", "contact");
-      formData.append("name", `${data.firstName} ${data.lastName}`);
-      formData.append("email", data.email);
-      formData.append("firstName", data.firstName);
-      formData.append("lastName", data.lastName);
-      if (data.subject) formData.append("subject", data.subject);
-      if (data.phone) formData.append("phone", data.phone);
-      if (data.message) formData.append("message", data.message);
-
-      const res = await fetch("/api/submit.php", {
-        method: "POST",
-        body: formData,
+      const result = await submitToApi({
+        formType: "contact",
+        name: `${data.firstName} ${data.lastName}`,
+        email: data.email,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        subject: data.subject || "",
+        phone: data.phone || "",
+        message: data.message || "",
       });
 
-      const result = await res.json();
-
-      if (!res.ok) {
-        throw new Error(result.error || "Failed to send message");
+      if (result.success === false) {
+        throw new Error(result.error);
       }
 
       setSuccess(true);
@@ -88,7 +83,10 @@ const Contact = () => {
                         fill="var(--color-primary)"
                       />
                     </svg>
-                    Name: James Septimus
+                    Email:{" "}
+                    <a href={`mailto:${siteConfig.brand.email}`} className="text-blue hover:underline">
+                      {siteConfig.brand.email}
+                    </a>
                   </p>
 
                   <p className="flex items-center gap-4">
@@ -153,7 +151,7 @@ const Contact = () => {
                       type="text"
                       {...register("firstName")}
                       id="firstName"
-                      placeholder="Jhon"
+                      placeholder="First name"
                       className={`rounded-md border ${errors.firstName ? "border-red" : "border-gray-3"
                         } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
                     />
@@ -171,7 +169,7 @@ const Contact = () => {
                       type="text"
                       {...register("lastName")}
                       id="lastName"
-                      placeholder="Deo"
+                      placeholder="Last name"
                       className={`rounded-md border ${errors.lastName ? "border-red" : "border-gray-3"
                         } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
                     />

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { newsletterSchema, type NewsletterFormData } from "@/lib/schemas";
+import { submitToApi } from "@/lib/submit-api";
 
 const Newsletter = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -24,19 +25,13 @@ const Newsletter = () => {
     setSuccess(false);
 
     try {
-      const formData = new FormData();
-      formData.append("formType", "newsletter");
-      formData.append("email", data.email);
-
-      const res = await fetch("/api/submit.php", {
-        method: "POST",
-        body: formData,
+      const result = await submitToApi({
+        formType: "newsletter",
+        email: data.email,
       });
 
-      const result = await res.json();
-
-      if (!res.ok) {
-        throw new Error(result.error || "Failed to subscribe");
+      if (result.success === false) {
+        throw new Error(result.error);
       }
 
       setSuccess(true);
@@ -82,7 +77,7 @@ const Newsletter = () => {
                     <input
                       type="email"
                       {...register("email")}
-                      placeholder="Enter your email"
+                      placeholder="you@local-orbit.com"
                       className={`w-full bg-gray-1 border ${
                         errors.email ? "border-red" : "border-gray-3"
                       } outline-none rounded-md placeholder:text-dark-4 py-3 px-5`}

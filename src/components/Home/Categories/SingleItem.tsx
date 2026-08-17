@@ -20,7 +20,7 @@ const SingleItem = ({ item }: { item: Category }) => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Image src={item.img} alt="Category" width={82} height={62} />
+        <Image src={item.img} alt={item.title} width={82} height={62} />
       </div>
 
       <div className="flex justify-center">

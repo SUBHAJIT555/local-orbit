@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { quoteSchema, type QuoteFormData } from "@/lib/schemas";
 import Breadcrumb from "../Common/Breadcrumb";
 import Billing from "./Billing";
+import { submitToApi } from "@/lib/submit-api";
 
 const Checkout = () => {
   const router = useRouter();
@@ -42,29 +43,24 @@ const Checkout = () => {
         price: item.discountedPrice,
       }));
 
-      const formData = new FormData();
-      formData.append("formType", "quote");
-      formData.append("billing_first_name", data.firstName);
-      formData.append("billing_last_name", data.lastName);
-      formData.append("billing_email", data.email);
-      formData.append("billing_phone", data.phone);
-      formData.append("billing_address", data.address);
-      formData.append("billing_town", data.town);
-      formData.append("billing_state", data.state || "");
-      formData.append("cart_items", JSON.stringify(orderItems));
-      formData.append("cart_total", total.toString());
-      formData.append("order_total", total.toString());
-      if (data.notes) formData.append("notes", data.notes);
-
-      const res = await fetch("/api/submit.php", {
-        method: "POST",
-        body: formData,
+      const result = await submitToApi({
+        formType: "quote",
+        billing_first_name: data.firstName,
+        billing_last_name: data.lastName,
+        billing_email: data.email,
+        billing_phone: data.phone,
+        billing_address: data.address,
+        billing_town: data.town,
+        billing_state: data.state || "",
+        billing_postcode: data.postcode || "",
+        cart_items: orderItems,
+        cart_total: total.toString(),
+        order_total: total.toString(),
+        notes: data.notes || "",
       });
 
-      const result = await res.json();
-
-      if (!res.ok) {
-        throw new Error(result.error || "Failed to submit quote request");
+      if (result.success === false) {
+        throw new Error(result.error);
       }
 
       dispatch(removeAllItemsFromCart());

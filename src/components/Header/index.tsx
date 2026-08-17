@@ -12,6 +12,7 @@ import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
 import categoryData from "@/constants/categoryData";
 import { selectProducts } from "@/lib/productSelector";
+import { siteConfig } from "@/config/site";
 
 const Header = () => {
   const router = useRouter();
@@ -147,7 +148,7 @@ const Header = () => {
             <Link className="flex-shrink-0" href="/">
               <Image
                 src="/images/logo/logo.svg"
-                alt="Logo"
+                alt={siteConfig.brand.name}
                 width={219}
                 height={36}
               />

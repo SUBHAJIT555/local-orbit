@@ -43,7 +43,7 @@ const PromoBanner = () => {
 
           <Image
             src="/images/HomePageImages/6.webp"
-            alt="promo img"
+            alt="Electronics and gadgets"
             className="absolute bottom-0 right-4 lg:right-26 -z-1"
             width={274}
             height={350}
@@ -62,7 +62,7 @@ const PromoBanner = () => {
           >
             <Image
               src="/images/HomePageImages/7.webp"
-              alt="promo img"
+              alt="Books and stationery"
               className="absolute top-1/2 -translate-y-1/2 left-3 sm:left-10 -z-1"
               width={241}
               height={241}
@@ -100,7 +100,7 @@ const PromoBanner = () => {
           >
             <Image
               src="/images/HomePageImages/5.webp"
-              alt="promo img"
+              alt="Fashion apparel"
               className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-8.5 -z-1"
               width={200}
               height={200}
@@ -108,7 +108,7 @@ const PromoBanner = () => {
 
             <div>
               <span className="block text-lg text-dark mb-1.5">
-                Men&apos;s, Women&apos;s & Kids&apos; Ware
+                Men&apos;s, Women&apos;s & Kids&apos; Wear
               </span>
 
               <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
